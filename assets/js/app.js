@@ -7,7 +7,7 @@ function play(userChoice) {
 
     let result;
     if (userChoice === computerChoice) {
-        result = '¡Empate!';
+        result = '¡Empate, sigue intentandolo!';
     } else if (
         (userChoice === 'piedra' && computerChoice === 'tijeras') ||
         (userChoice === 'papel' && computerChoice === 'piedra') ||
@@ -24,12 +24,12 @@ let contador = 0;
 let limiteDeOpcionesParaJugar = 10; // Número máximo de opciones para jugar
 
 function incrementarContador() {
-  if (contador < limiteDeOpcionesParaJugar) {
-    contador++;
-    actualizarContador();
-  } else {
-    alert("¡Se ha alcanzado el límite de opciones para jugar!");
-  }
+    if (contador < limiteDeOpcionesParaJugar) {
+        contador++;
+        actualizarContador();
+    } else {
+        alert("¡Se ha alcanzado el límite de opciones para jugar!");
+    }
 }
 
 
@@ -43,4 +43,11 @@ function resetearContador() {
 function actualizarContador() {
     let contadorElemento = document.getElementById('contador');
     contadorElemento.textContent = contador;
+}
+function incrementarContador() {
+    if (contador === game) {
+       
+    } else {
+        alert("¡Se ha alcanzado el límite de opciones para jugar!");
+    }
 }
